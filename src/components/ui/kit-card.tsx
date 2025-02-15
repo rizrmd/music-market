@@ -1,6 +1,7 @@
 import { AudioLines, AudioWaveform, Heart, Play } from "lucide-react";
 import Image from "next/image";
 import { ReactNode } from "react";
+import play_img from "/public/img/play.svg";
 
 /**
  * Props for the KitCard component representing a music kit/pack in the marketplace
@@ -35,7 +36,7 @@ export function KitCard({
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity rounded-[12px]">
           <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded-full  bg-[#0169ff] text-white">
             <Image 
-              src="/img/play.svg" 
+              src={play_img} 
               alt="Play" 
               width={12} 
               height={12} 

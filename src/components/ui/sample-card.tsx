@@ -1,6 +1,11 @@
 import { AudioLines, Badge, Ellipsis, Heart, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import { ReactNode } from "react";
+import stop_img from "/public/img/stop.svg";
+import play_img from "/public/img/play.svg";
+import wave_play_img from "/public/img/wave-play.svg";
+import wave_idle_img from "/public/img/wave-idle.svg";
+import flame_img from "/public/img/flame.svg";
 
 /**
  * Props for the SampleCard component representing a music sample in the marketplace
@@ -34,16 +39,16 @@ export function SampleCard({
       <Image src={image} alt={title} width={60} height={60} className="rounded-[6px]" />
       <div className="w-[10px] flex items-center min-w-[50px] md:min-w-auto justify-center">
         {isPlay ? (
-          <Image src="/img/stop.svg" alt="Stop" width={24} height={24} />
+          <Image src={stop_img} alt="Stop" width={24} height={24} />
         ) : (
-          <Image src="/img/play.svg" alt="Play" width={24} height={24} />
+          <Image src={play_img} alt="Play" width={24} height={24} />
         )}
       </div>
       <div className="md:flex hidden items-center max-w-[290px] pr-3">
         {isPlay ? (
-          <Image src="/img/wave-play.svg" alt="Playing waveform" width={290} height={40} />
+          <Image src={wave_play_img} alt="Playing waveform" width={290} height={40} />
         ) : (
-          <Image src="/img/wave-idle.svg" alt="Idle waveform" width={290} height={40} />
+          <Image src={wave_idle_img} alt="Idle waveform" width={290} height={40} />
         )}
       </div>
       <div className="flex flex-col justify-center min-w-[300px] flex-1">
@@ -51,7 +56,7 @@ export function SampleCard({
         <div className="text-sm opacity-50">{producer}</div>
       </div>
       <div className="lg:flex hidden items-center flex-wrap text-xs">
-        <Image src="/img/flame.svg" alt="Popular" width={20} height={20} className="mr-2" />
+        <Image src={flame_img} alt="Popular" width={20} height={20} className="mr-2" />
         <div className="px-[5px] py-[1px] rounded-[5px] text-[10px] tracking-wider border border-[#4d4d4d] flex items-center">
           STEMS
         </div>

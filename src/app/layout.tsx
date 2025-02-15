@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "./font.css";
 
+import localFont from "next/font/local";
+
+const euclid = localFont({
+  src: "/public/font/EuclidCircularA-Regular.woff2",
+  variable: "--font-euclid",
+});
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} ${euclid.variable} antialiased`}>{children}</body>
     </html>
   );
 }

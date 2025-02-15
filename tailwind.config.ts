@@ -10,7 +10,7 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			euclid: ['Euclid Circular A', 'sans-serif']
+  			euclid: ['var(--font-euclid)', 'sans-serif']
   		},
   		colors: {
   			background: 'hsl(var(--background))',

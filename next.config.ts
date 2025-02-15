@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  assetPrefix: ".",
-  basePath: process.env.NODE_ENV === "production" ? "/music-market" : "",
+  basePath: "/music-market",
   images: {
     unoptimized: true,
   },

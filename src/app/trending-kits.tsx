@@ -1,5 +1,6 @@
 import { KitCard } from "@/components/ui/kit-card";
 import Image from "next/image";
+import flame_img from "/public/img/flame.svg";
 
 export function TrendingKits() {
   const latestKits = [
@@ -51,7 +52,7 @@ export function TrendingKits() {
     <section className="flex flex-col">
       <h2 className="text-2xl font-bold mb-6 font-euclid mt-[50px] flex items-center">
         <Image 
-          src="/img/flame.svg" 
+          src={flame_img} 
           alt="Trending icon" 
           width={22} 
           height={22} 
@@ -68,7 +69,7 @@ export function TrendingKits() {
             prefix={{
               genre: (
                 <Image 
-                  src="/img/flame.svg" 
+                  src={flame_img} 
                   alt="Trending" 
                   width={12} 
                   height={12} 

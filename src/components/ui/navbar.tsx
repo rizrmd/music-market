@@ -7,6 +7,9 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "/public/img/logo.svg";
+import cart_img from "/public/img/cart.svg";
+import burger_img from "/public/img/burger.svg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +20,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/img/logo.svg"
+              src={logo}
               alt="Sample Stash Logo"
               height={40}
               width={200}
@@ -34,12 +37,12 @@ export default function Navbar() {
             className="ml-2 text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Image 
-              src="/img/burger.svg" 
-              alt="Menu" 
-              width={24} 
-              height={24} 
-              className="h-6 w-6" 
+            <Image
+              src={burger_img}
+              alt="Menu"
+              width={24}
+              height={24}
+              className="h-6 w-6"
             />
           </Button>
 
@@ -54,12 +57,12 @@ export default function Navbar() {
             asChild
           >
             <Link href="/">
-              <Image 
-                src="/img/cart.svg" 
-                alt="Shopping Cart" 
-                width={24} 
-                height={24} 
-                className="h-6 w-6" 
+              <Image
+                src={cart_img}
+                alt="Shopping Cart"
+                width={24}
+                height={24}
+                className="h-6 w-6"
               />
               <span className="sr-only">Shopping Cart</span>
             </Link>
@@ -110,12 +113,12 @@ export default function Navbar() {
             asChild
           >
             <Link href="/">
-              <Image 
-                src="/img/cart.svg" 
-                alt="Shopping Cart" 
-                width={20} 
-                height={20} 
-                className="h-5 w-5" 
+              <Image
+                src={cart_img}
+                alt="Shopping Cart"
+                width={20}
+                height={20}
+                className="h-5 w-5"
               />
               <span className="sr-only">Shopping Cart</span>
             </Link>

@@ -14,6 +14,8 @@ export function GenreCard({ title, image, prefix }: GenreCardProps) {
         <Image
           src={image}
           alt={title}
+          width={500}
+          height={500}
           className="absolute inset-0 w-full object-cover transition-transform duration-300 rounded-[12px] opacity-10 group-hover:opacity-30"
         />
         <div className="flex items-center justify-center flex-1 text-white text-xl font-medium font-euclid">

@@ -1,6 +1,7 @@
 "use client";
 
 import { Play } from "lucide-react";
+import browse_img from "/public/img/browse.svg";
 import {
   Carousel,
   CarouselContent,
@@ -55,6 +56,8 @@ export function Hero() {
                 <Image
                   src={pack.image}
                   alt={pack.title}
+                  width={1177}
+                  height={720}
                   className="w-full max-h-[600px] h-full object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-12 z-20">
@@ -66,7 +69,7 @@ export function Hero() {
                   </p>
                   <Image
                     alt="browse"
-                    src="/img/browse.svg"
+                    src={browse_img}
                     className="cursor-pointer transition-all rounded-full hover:opacity-80 w-[160px]"
                   />
                 </div>

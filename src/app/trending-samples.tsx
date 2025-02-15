@@ -1,6 +1,7 @@
 import { KitCard } from "@/components/ui/kit-card";
 import { SampleCard, SampleCardProps } from "@/components/ui/sample-card";
 import Image from "next/image";
+import flame_img from "/public/img/flame.svg";
 
 export function TrendingSamples() {
   const trendingSamples: SampleCardProps[] = [
@@ -60,7 +61,7 @@ export function TrendingSamples() {
     <section className="flex flex-col">
       <h2 className="text-2xl font-bold mb-6 font-euclid mt-[50px] flex items-center">
         <Image 
-          src="/img/flame.svg" 
+          src={flame_img} 
           alt="Trending icon" 
           width={22} 
           height={22} 
