@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   basePath: "/music-market",
   assetPrefix: "/music-market/",
   images: {
-    unoptimized: true,
+    unoptimized: true, 
   },
 };
 
