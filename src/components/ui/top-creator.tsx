@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReactNode } from "react";
 
 type TopCreatorProps = {
@@ -11,7 +12,7 @@ export function TopCreator({ name, image, badges, prefix }: TopCreatorProps) {
   return (
     <div className="group relative overflow-hidden border border-transparent hover:border-[#383838] hover:bg-[#2b2b2b] cursor-pointer transition-all rounded-[18px]">
       <div className="relative aspect-square overflow-hidden p-[7px] cursor-pointer">
-        <img
+        <Image
           src={image}
           alt={name}
           className="object-cover h-full w-full transition-transform duration-300 rounded-[12px]"

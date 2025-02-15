@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 type Pack = {
   title: string;
@@ -51,7 +52,7 @@ export function Hero() {
           {packs.map((pack, index) => (
             <CarouselItem key={index} className="basis-[80%] h-[600px]">
               <div className="relative w-full h-full select-none ">
-                <img
+                <Image
                   src={pack.image}
                   alt={pack.title}
                   className="w-full max-h-[600px] h-full object-cover rounded-lg"
@@ -63,10 +64,10 @@ export function Hero() {
                   <p className="text-lg text-white/90 mb-8 max-w-xl text-center">
                     {pack.description}
                   </p>
-                  <img
-                    width="160px"
+                  <Image
+                    alt="browse"
                     src="/img/browse.svg"
-                    className="cursor-pointer transition-all rounded-full hover:opacity-80"
+                    className="cursor-pointer transition-all rounded-full hover:opacity-80 w-[160px]"
                   />
                 </div>
               </div>
