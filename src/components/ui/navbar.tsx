@@ -34,7 +34,13 @@ export default function Navbar() {
             className="ml-2 text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <img src="/img/burger.svg" className="h-6 w-6" />
+            <Image 
+              src="/img/burger.svg" 
+              alt="Menu" 
+              width={24} 
+              height={24} 
+              className="h-6 w-6" 
+            />
           </Button>
 
           <div className="pl-2">
@@ -48,7 +54,13 @@ export default function Navbar() {
             asChild
           >
             <Link href="/">
-              <img src="/img/cart.svg" className="h-6 w-6" />
+              <Image 
+                src="/img/cart.svg" 
+                alt="Shopping Cart" 
+                width={24} 
+                height={24} 
+                className="h-6 w-6" 
+              />
               <span className="sr-only">Shopping Cart</span>
             </Link>
           </Button>
@@ -98,7 +110,13 @@ export default function Navbar() {
             asChild
           >
             <Link href="/">
-              <img src="/img/cart.svg" className="h-5 w-5" />
+              <Image 
+                src="/img/cart.svg" 
+                alt="Shopping Cart" 
+                width={20} 
+                height={20} 
+                className="h-5 w-5" 
+              />
               <span className="sr-only">Shopping Cart</span>
             </Link>
           </Button>

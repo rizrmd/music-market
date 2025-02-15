@@ -1,4 +1,5 @@
 import { AudioLines, AudioWaveform, Heart, Play } from "lucide-react";
+import Image from "next/image";
 import { ReactNode } from "react";
 
 /**
@@ -24,14 +25,22 @@ export function KitCard({
   return (
     <div className="group relative overflow-hidden border border-transparent hover:border-[#383838] hover:bg-[#2b2b2b] cursor-pointer transition-all rounded-[18px]">
       <div className="relative aspect-square overflow-hidden p-[7px] cursor-pointer">
-        <img
+        <Image
           src={image}
           alt={title}
+          width={400}
+          height={400}
           className="object-cover h-full w-full transition-transform duration-300 rounded-[12px]"
         />
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity rounded-[12px]">
           <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded-full  bg-[#0169ff] text-white">
-            <img src="/img/play.svg" className="w-3 h-3" />
+            <Image 
+              src="/img/play.svg" 
+              alt="Play" 
+              width={12} 
+              height={12} 
+              className="w-3 h-3" 
+            />
           </button>
         </div>
       </div>

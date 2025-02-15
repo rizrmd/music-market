@@ -51,15 +51,6 @@ export default function Home() {
         <TrendingSamples />
 
         <section className="flex flex-col">
-          <h2 className="text-2xl font-bold mb-6 font-euclid">Featured Samples</h2>
-          <div className="flex flex-col space-y-2">
-            {sampleData.map((sample, index) => (
-              <SampleCard key={index} {...sample} isPlay={false} />
-            ))}
-          </div>
-        </section>
-
-        <section className="flex flex-col">
           <h2 className="text-2xl font-bold mb-6 font-euclid">Browse by Genre</h2>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
             <GenreCard title="Hip Hop" image="/img/cover.1.png" />

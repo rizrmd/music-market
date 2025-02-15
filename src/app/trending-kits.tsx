@@ -1,4 +1,5 @@
 import { KitCard } from "@/components/ui/kit-card";
+import Image from "next/image";
 
 export function TrendingKits() {
   const latestKits = [
@@ -49,7 +50,14 @@ export function TrendingKits() {
   return (
     <section className="flex flex-col">
       <h2 className="text-2xl font-bold mb-6 font-euclid mt-[50px] flex items-center">
-        <img src="/img/flame.svg" className="w-[22px] h-[22px] mr-2" /> Trending Kits
+        <Image 
+          src="/img/flame.svg" 
+          alt="Trending icon" 
+          width={22} 
+          height={22} 
+          className="mr-2" 
+        /> 
+        Trending Kits
       </h2>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-6">
@@ -58,7 +66,15 @@ export function TrendingKits() {
             key={index}
             {...kit}
             prefix={{
-              genre: <img src="/img/flame.svg" className="w-[12px] h-[12px] mr-1 -mt-1" />,
+              genre: (
+                <Image 
+                  src="/img/flame.svg" 
+                  alt="Trending" 
+                  width={12} 
+                  height={12} 
+                  className="mr-1 -mt-1" 
+                />
+              ),
             }}
           />
         ))}
