@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
+import { addBasePath } from 'next/dist/client/add-base-path';
 
 type GenreCardProps = {
   title: string;
@@ -12,7 +13,7 @@ export function GenreCard({ title, image, prefix }: GenreCardProps) {
     <div className="group relative overflow-hidden border border-transparent hover:border-[#383838] hover:bg-[#2b2b2b] cursor-pointer transition-all rounded-[18px] h-[100px] flex">
       <div className="relative aspect-square overflow-hidden p-[7px] cursor-pointer flex flex-1">
         <Image
-          src={image}
+          src={addBasePath(image)}
           alt={title}
           width={500}
           height={500}

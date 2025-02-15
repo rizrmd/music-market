@@ -2,6 +2,7 @@ import { AudioLines, AudioWaveform, Heart, Play } from "lucide-react";
 import Image from "next/image";
 import { ReactNode } from "react";
 import play_img from "/public/img/play.svg";
+import { addBasePath } from 'next/dist/client/add-base-path';
 
 /**
  * Props for the KitCard component representing a music kit/pack in the marketplace
@@ -27,7 +28,7 @@ export function KitCard({
     <div className="group relative overflow-hidden border border-transparent hover:border-[#383838] hover:bg-[#2b2b2b] cursor-pointer transition-all rounded-[18px]">
       <div className="relative aspect-square overflow-hidden p-[7px] cursor-pointer">
         <Image
-          src={image}
+          src={addBasePath(image)}
           alt={title}
           width={400}
           height={400}

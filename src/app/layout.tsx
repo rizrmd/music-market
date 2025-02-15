@@ -5,7 +5,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 
 const euclid = localFont({
-  src: "/public/font/EuclidCircularA-Regular.woff2",
+  src: "../../public/font/EuclidCircularA-Regular.woff2",
   variable: "--font-euclid",
 });
 const inter = Inter({

@@ -1,7 +1,4 @@
 "use client";
-
-import { Play } from "lucide-react";
-import browse_img from "/public/img/browse.svg";
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +7,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { addBasePath } from 'next/dist/client/add-base-path';
 import Image from "next/image";
+import browse_img from "/public/img/browse.svg";
 
 type Pack = {
   title: string;
@@ -54,7 +53,7 @@ export function Hero() {
             <CarouselItem key={index} className="basis-[80%] h-[600px]">
               <div className="relative w-full h-full select-none ">
                 <Image
-                  src={pack.image}
+                  src={addBasePath(pack.image)}
                   alt={pack.title}
                   width={1177}
                   height={720}
