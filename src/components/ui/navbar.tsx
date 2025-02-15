@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black">
-      <div className="flex h-[100px] items-center px-[50px] relative">
+      <div className="flex h-[100px] items-center md:px-[50px] pl-[20px] pr-[5px] relative">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
             <Image

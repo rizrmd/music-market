@@ -44,7 +44,7 @@ export function SampleCard({
         height={60}
         className="rounded-[6px]"
       />
-      <div className="w-[10px] flex items-center min-w-[50px] md:min-w-auto justify-center">
+      <div className="w-[10px] flex items-center min-w-[15px] md:min-w-auto justify-center">
         {isPlay ? (
           <Image src={stop_img} alt="Stop" width={24} height={24} />
         ) : (
@@ -68,8 +68,8 @@ export function SampleCard({
           />
         )}
       </div>
-      <div className="flex flex-col justify-center min-w-[300px] flex-1">
-        <div>{title}</div>
+      <div className="flex flex-col justify-center md:min-w-[300px] flex-1">
+        <div className="truncate md:max-w-[300px] max-w-[80px]">{title}</div>
         <div className="text-sm opacity-50">{producer}</div>
       </div>
       <div className="lg:flex hidden items-center flex-wrap text-xs">
